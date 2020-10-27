@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>contents demo</title>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+
+ 
+ <img src="" id="imm">
+<script>
+$.get("http://morning-market.heinminhtet.com/", {}, function(content){
+	var res=$(content).find('img')[0];
+	var srrc=$(res).attr('src');
+	console.log(srrc);
+   $("#imm").attr('src',"http://morning-market.heinminhtet.com/"+srrc)
+})
+
+</script>
+</body>
+</html>
